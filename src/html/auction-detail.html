@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <title>Proyek HTML dengan SCSS</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar-custom">
+        <div class="wrapper">
+          <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+          <div class="center">
+            <a href="index.html">Beranda</a>
+            <a href="transaction-history.html">Produk</a>
+            <a href="list-auction-products.html" class="active">Lelang</a>
+            <a href="help.html">Bantuan</a>
+          </div>
+
+          <div class="right">
+            <a href="cart.html">
+              <div>
+                <img src="/src/assets/svg/cart3.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="notif-count">
+              <img src="/src/assets/svg/bell.svg" alt="" />
+              <div>2</div>
+            </div>
+
+            <img src="/src/assets/svg/avatar.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-custom">
+        <div class="product-pages auction-detail-pages">
+          <div class="breadcump">
+            <img
+              onclick="history.back()"
+              src="/src/assets/svg/Chevron.svg"
+              alt=""
+            />
+            <h1><b>Lelang /</b> Detail</h1>
+          </div>
+
+          <div class="product-wrapper">
+            <div class="row">
+              <div class="col-xl-7 p-0 col-12 product-detail">
+                <div class="top">
+                  <div class="left">
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <h1>Melon Golden Langkawi Super Big Size 5 Kg</h1>
+
+                    <h2>Harga mulai Rp110.000</h2>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <p class="grey">Mulai</p>
+                        <p>20 April 2023, 08.00 WIB</p>
+                      </div>
+                      <div class="col-6">
+                        <p class="grey">Berakhir</p>
+                        <p>20 April 2023, 16.00 WIB</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <p class="grey">Umur Simpan</p>
+                        <p>2-3 Hari (Suhu Ruang)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h1>Peraturan</h1>
+
+                  <div class="desc mt-1">
+                    <p>
+                      1. Peserta tidak dapat menawar dengan harga dibawah harga
+                      tertinggi
+                    </p>
+                    <p>
+                      2. Peserta pertama hanya bisa menawar diatas harga mulai
+                    </p>
+                    <p>
+                      3. Pemenang lelang wajib membeli produk dengan harga yang
+                      dimenangkan
+                    </p>
+                    <p>
+                      4. Pemenang lelang yang tidak membeli produk akan di non
+                      aktifkan dalam waktu 1 tahun
+                    </p>
+                    <p>
+                      5. Jika pemenang membatalkan tawaran, maka peserta
+                      diposisi kedua akan secara otomatis menjadi pemenang
+                    </p>
+                  </div>
+
+                  <h1 class="mt-4">Deskripsi</h1>
+
+                  <div class="desc mt-1">
+                    <p>
+                      Golden melon adalah buah yang memikat dengan warnanya yang
+                      cerah dan rasa lezatnya. Buah ini memiliki kulit berwarna
+                      kuning emas yang halus yang menyembunyikan dagingnya yang
+                      lezat, manis, dan segar.
+                    </p>
+
+                    <br />
+
+                    <p>
+                      Kulitnya terlihat berkilau dengan warna keemasan yang
+                      memancarkan aroma harum untuk menandakan kematangannya.
+                      Tekstur kulitnya yang halus dengan sedikit alur menambah
+                      daya tarik visualnya, memberi petunjuk akan rasa lezat
+                      yang tersembunyi di dalamnya. Saat dibelah, buah ini
+                      mengungkap daging berwarna kuning keemasan yang sangat
+                      juicy dengan perpaduan manis yang nikmat dan sentuhan
+                      aroma bunga yang lembut, menjadikannya kesegaran yang
+                      memanjakan lidah.
+                    </p>
+
+                    <br />
+
+                    <p>
+                      Daging golden melon kaya akan vitamin, terutama vitamin C
+                      dan A, serta mengandung nutrisi penting seperti kalium dan
+                      antioksidan. Buah yang lezat ini dapat dinikmati segar,
+                      dicampurkan ke dalam salad buah, atau dijadikan jus dan
+                      smoothie yang menyegarkan, memberikan cita rasa manis yang
+                      menyenangkan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-5 col-12 mt-4 mt-xl-0 offer-section">
+                <div class="wrapper">
+                  <div class="top-offer">
+                    <h1 class="fw-700">Penawaran Teratas</h1>
+                    <div class="wrapper">
+                      <div class="left">
+                        <p class="text-center">Rank</p>
+                        <div class="rank mt-1 text-center">1</div>
+                      </div>
+
+                      <div class="right">
+                        <h3 class="lato grey">13/10/2022, 13.41</h3>
+                        <h1 class="fw-700 mt-1">Rp180.000</h1>
+                      </div>
+                    </div>
+
+                    <h3 class="lato grey fw-700 text-center mt-2">
+                      38 kali ditawar
+                    </h3>
+                  </div>
+
+                  <div class="top-offer mt-4">
+                    <h1 class="fw-700">Penawaran Teratas Anda</h1>
+                    <div class="wrapper">
+                      <div class="left">
+                        <p class="text-center">Rank</p>
+                        <div class="rank mt-1 text-center">3</div>
+                      </div>
+
+                      <div class="right">
+                        <h3 class="lato grey">13/10/2022, 13.41</h3>
+                        <h1 class="fw-700 mt-1">Rp140.000</h1>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="make-offer">
+                    <h3 class="lato fw-700">Buat Penawaran Baru</h3>
+
+                    <div class="input-offer-wrapper">
+                      <div class="left">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M27.5979 15.9999C27.5979 16.2562 27.4961 16.502 27.3149 16.6833C27.1336 16.8645 26.8878 16.9663 26.6315 16.9663H5.36976C5.11345 16.9663 4.86763 16.8645 4.68639 16.6833C4.50514 16.502 4.40332 16.2562 4.40332 15.9999C4.40332 15.7436 4.50514 15.4978 4.68639 15.3165C4.86763 15.1353 5.11345 15.0334 5.36976 15.0334H26.6315C26.8878 15.0334 27.1336 15.1353 27.3149 15.3165C27.4961 15.4978 27.5979 15.7436 27.5979 15.9999Z"
+                            fill="#343330"
+                          />
+                        </svg>
+
+                        <p>20.000</p>
+                      </div>
+
+                      <input type="text" placeholder="Masukkan Penawaran" />
+
+                      <div class="right">
+                        <svg
+                          width="32"
+                          height="32"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z"
+                            fill="#404040"
+                          />
+                        </svg>
+
+                        <p>20.000</p>
+                      </div>
+                    </div>
+
+                    <button class="w-100 button-custom">Buat penawaran</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/ant-design_youtube-outlined.svg"
+                alt=""
+              />
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">
+                Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+              </h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '"> </span>';
+          },
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

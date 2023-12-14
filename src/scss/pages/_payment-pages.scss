@@ -1,0 +1,66 @@
+.payment-pages {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  //   padding: 50px 100px;
+
+  .time-countdown {
+    margin-top: 50px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .btn-status {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .right {
+      display: flex;
+      gap: 80px;
+      align-items: flex-end;
+
+      .copy {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+    }
+  }
+
+  .payment-guide {
+    margin-top: 30px;
+
+    .wrapper {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      
+      .item {
+        border: 1px solid #9f9f9f;
+
+        ol {
+          margin: 0;
+          padding-left: 1rem;
+        }
+
+        .header {
+          padding: 8px 12px;
+          background: #dddfe8;
+        }
+
+        .content {
+          padding: 15px 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <title>Proyek HTML dengan SCSS</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- pin js -->
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pincode-input@0.1.0/dist/pincode-input.min.css"
+    />
+  </head>
+  <body>
+    <!-- Modal login -->
+    <div
+      class="modal fade"
+      id="login"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img
+              data-bs-dismiss="modal"
+              class="close-modal"
+              src="/src/assets/svg/close-modal.svg"
+              alt=""
+            />
+
+            <h3 class="text-center">Login</h3>
+          </div>
+          <div class="modal-body pb-0">
+            <div class="authentication">
+              <div class="input-group w-100">
+                <div class="item w-100">
+                  <label for="">E-mail / No. Telpon</label>
+                  <input
+                    class="border-grey w-100"
+                    type="text"
+                    placeholder="Masukkan e-mail / no. telpon"
+                  />
+                </div>
+
+                <div class="item w-100">
+                  <label for="">Kata Sandi</label>
+                  <div class="with-icon">
+                    <img
+                      class="icon-suffix"
+                      src="/src/assets/svg/eye.svg"
+                      alt=""
+                    />
+                    <input
+                      class="border-grey w-100"
+                      type="text"
+                      placeholder="Masukkan kata sandi"
+                    />
+                  </div>
+                </div>
+
+                <div class="item last-item">
+                  <p class="fw-600 light-green text-end w-100">
+                    Lupa kata sandi?
+                  </p>
+                </div>
+              </div>
+
+              <div class="bottom">
+                <button class="w-100 button-custom">Login</button>
+
+                <div class="divider">
+                  <hr />
+                  <p>atau masuk dengan</p>
+                </div>
+
+                <button
+                  class="button-custom light w-100"
+                  style="gap: 19px; height: 64px"
+                >
+                  <img
+                    src="/src/assets/svg/flat-color-icons_google.svg"
+                    alt=""
+                  />
+                  <h3>Google</h3>
+                </button>
+
+                <div class="d-flex justify-content-center">
+                  <p>Belum punya akun?</p>
+                  <a href="">
+                    <p class="fw-600 ms-2 light-green">Register</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div
+      class="modal fade"
+      id="register"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img
+              data-bs-dismiss="modal"
+              class="close-modal"
+              src="/src/assets/svg/close-modal.svg"
+              alt=""
+            />
+
+            <h3 class="text-center">Register</h3>
+          </div>
+          <div class="modal-body pb-0">
+            <div class="authentication">
+              <div class="input-group w-100">
+                <div class="item w-100">
+                  <label for="">Nama Lengkap</label>
+                  <input
+                    class="border-grey w-100"
+                    type="text"
+                    placeholder="Masukkan nama lengkap"
+                  />
+                </div>
+
+                <div class="item w-100">
+                  <label for="">E-mail</label>
+                  <input
+                    class="border-grey w-100"
+                    type="email"
+                    placeholder="Masukkan e-mail"
+                  />
+                </div>
+
+                <div class="item w-100">
+                  <label for="">No. Telpon</label>
+                  <input
+                    class="border-grey w-100"
+                    type="number"
+                    placeholder="Masukkan no. telpon"
+                  />
+                </div>
+
+                <div class="item w-100">
+                  <label for="">Kata Sandi</label>
+                  <div class="with-icon">
+                    <img
+                      class="icon-suffix"
+                      src="/src/assets/svg/eye.svg"
+                      alt=""
+                    />
+                    <input
+                      class="border-grey w-100"
+                      type="password"
+                      placeholder="Masukkan kata sandi"
+                    />
+                  </div>
+                </div>
+
+                <div class="item last-item">
+                  <p class="fw-600 light-green text-end w-100">
+                    Lupa kata sandi?
+                  </p>
+                </div>
+              </div>
+
+              <div class="bottom">
+                <button class="w-100 button-custom">Register</button>
+
+                <div class="divider">
+                  <hr />
+                  <p>atau masuk dengan</p>
+                </div>
+
+                <button
+                  class="button-custom light w-100"
+                  style="gap: 19px; height: 64px"
+                >
+                  <img
+                    src="/src/assets/svg/flat-color-icons_google.svg"
+                    alt=""
+                  />
+                  <h3>Google</h3>
+                </button>
+
+                <div class="d-flex justify-content-center">
+                  <p>Sudah punya akun?</p>
+                  <a href="">
+                    <p class="fw-600 ms-2 light-green">Login</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal kirim otp -->
+    <div
+      class="modal fade"
+      id="sendOtp"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img
+              data-bs-dismiss="modal"
+              class="close-modal"
+              src="/src/assets/svg/close-modal.svg"
+              alt=""
+            />
+
+            <h3 class="text-center">Kirim OTP</h3>
+          </div>
+          <div class="modal-body">
+            <div class="authentication">
+              <div class="input-group w-100">
+                <div class="item w-100">
+                  <label for="">E-mail / no. telpon terdaftar</label>
+                  <input
+                    class="border-grey w-100"
+                    type="text"
+                    placeholder="Masukkan e-mail / no. telpon terdaftar"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="w-100 button-custom">Kirim OTP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal change passowrd -->
+    <div
+      class="modal fade"
+      id="changePassword"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img
+              data-bs-dismiss="modal"
+              class="close-modal"
+              src="/src/assets/svg/close-modal.svg"
+              alt=""
+            />
+
+            <h3 class="text-center">Ubah Kata Sandi</h3>
+          </div>
+          <div class="modal-body">
+            <div class="authentication">
+              <div class="input-group w-100">
+                <div class="item w-100">
+                  <label for="">Kata Sandi Baru</label>
+                  <div class="with-icon">
+                    <img
+                      class="icon-suffix"
+                      src="/src/assets/svg/eye.svg"
+                      alt=""
+                    />
+                    <input
+                      class="border-grey w-100"
+                      type="password"
+                      placeholder="Masukkan kata sandi"
+                    />
+                  </div>
+                </div>
+
+                <div class="item w-100">
+                  <label for="">Konfirmasi Kata Sandi Baru</label>
+                  <div class="with-icon">
+                    <img
+                      class="icon-suffix"
+                      src="/src/assets/svg/eye.svg"
+                      alt=""
+                    />
+                    <input
+                      class="border-grey w-100"
+                      type="password"
+                      placeholder="Masukkan kata sandi"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="w-100 button-custom">Ubah</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal otp -->
+    <div
+      class="modal fade"
+      id="otp"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img
+              data-bs-dismiss="modal"
+              class="close-modal"
+              src="/src/assets/svg/close-modal.svg"
+              alt=""
+            />
+
+            <h3 class="text-center">Masukkan OTP</h3>
+          </div>
+          <div class="modal-body pb-0">
+            <div class="authentication">
+              <div class="pin-modal-wrapper">
+                <div class="w-100">
+                  <p class="text-center w-100">
+                    Kode verifikasi telah dikirim melalui
+                  </p>
+                  <p class="text-center w-100">WhatsApp +628039849405</p>
+                </div>
+                <div class="input-pin"></div>
+                <h3 class="lato fw-400 w-100 text-center">01:32</h3>
+                <div class="d-flex justify-content-center">
+                  <p>Tidak menerima OTP?</p>
+                  <a href="">
+                    <p class="fw-600 ms-2 light-green">Kirim Ulang</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <nav class="navbar-custom">
+        <div class="wrapper">
+          <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+          <div class="center">
+            <a href="index.html">Beranda</a>
+            <a href="transaction-history.html">Produk</a>
+            <a href="list-auction-products.html">Lelang</a>
+            <a href="help.html">Bantuan</a>
+          </div>
+
+          <div class="right">
+            <a href="cart.html">
+              <div>
+                <img src="/src/assets/svg/cart3.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="notif-count">
+              <img src="/src/assets/svg/bell.svg" alt="" />
+              <div>2</div>
+            </div>
+
+            <img src="/src/assets/svg/avatar.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <button data-bs-toggle="modal" data-bs-target="#login">login</button>
+      <button data-bs-toggle="modal" data-bs-target="#register">
+        register
+      </button>
+      <button data-bs-toggle="modal" data-bs-target="#sendOtp">
+        kirim otp
+      </button>
+      <button data-bs-toggle="modal" data-bs-target="#changePassword">
+        ubah password
+      </button>
+      <button data-bs-toggle="modal" data-bs-target="#otp">masukkan otp</button>
+
+      <div class="container-custom">
+        <div class="product-pages">
+          <div class="breadcump">
+            <img
+              onclick="history.back()"
+              src="/src/assets/svg/Chevron.svg"
+              alt=""
+            />
+            <h1><b>Produk /</b> Detail</h1>
+          </div>
+
+          <div class="product-wrapper">
+            <div class="row">
+              <div class="col-xl-7 col-12 product-detail">
+                <div class="top">
+                  <div class="left">
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <h1>Melon Segar Big Size 2 Kg - 2,5 Kg</h1>
+
+                    <div class="data-product">
+                      <p class="d-flex align-items-center">
+                        <img
+                          class="pe-2"
+                          src="/src/assets/svg/star.svg"
+                          alt=""
+                        />
+                        4.9
+                      </p>
+
+                      <p>124 <span>Terjual</span></p>
+                      <p>34 <span>Ulasan</span></p>
+                    </div>
+
+                    <h2>Rp86.000 - Rp92.000</h2>
+
+                    <div class="variant">
+                      <div class="item active">
+                        <p class="fw-600">2 Kg</p>
+                      </div>
+                      <div class="item">
+                        <p class="fw-600">2, 16 Kg</p>
+                      </div>
+                      <div class="item">
+                        <p class="fw-600">2 ,36 Kg</p>
+                      </div>
+                      <div class="item">
+                        <p class="fw-600">2 ,4 Kg</p>
+                      </div>
+                      <div class="item">
+                        <p class="fw-600">2 ,46 Kg</p>
+                      </div>
+                      <div class="item">
+                        <p class="fw-600">2 ,5 Kg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <div class="spec">
+                    <h3>Spesifikasi</h3>
+
+                    <div class="row mt-1">
+                      <div class="col-6">
+                        <p class="grey">Stok</p>
+                        <p>172</p>
+                      </div>
+
+                      <div class="col-6">
+                        <p class="grey">Umur Simpan</p>
+                        <p>2-3 Hari (Suhu Ruang)</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="desc mt-4">
+                    <p>
+                      Golden melon adalah buah yang memikat dengan warnanya yang
+                      cerah dan rasa lezatnya. Buah ini memiliki kulit berwarna
+                      kuning emas yang halus yang menyembunyikan dagingnya yang
+                      lezat, manis, dan segar.
+                    </p>
+
+                    <br />
+
+                    <p>
+                      Kulitnya terlihat berkilau dengan warna keemasan yang
+                      memancarkan aroma harum untuk menandakan kematangannya.
+                      Tekstur kulitnya yang halus dengan sedikit alur menambah
+                      daya tarik visualnya, memberi petunjuk akan rasa lezat
+                      yang tersembunyi di dalamnya. Saat dibelah, buah ini
+                      mengungkap daging berwarna kuning keemasan yang sangat
+                      juicy dengan perpaduan manis yang nikmat dan sentuhan
+                      aroma bunga yang lembut, menjadikannya kesegaran yang
+                      memanjakan lidah.
+                    </p>
+
+                    <br />
+
+                    <p>
+                      Daging golden melon kaya akan vitamin, terutama vitamin C
+                      dan A, serta mengandung nutrisi penting seperti kalium dan
+                      antioksidan. Buah yang lezat ini dapat dinikmati segar,
+                      dicampurkan ke dalam salad buah, atau dijadikan jus dan
+                      smoothie yang menyegarkan, memberikan cita rasa manis yang
+                      menyenangkan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-5 col-12 buy-section">
+                <div class="wrapper">
+                  <p>Varian dipilih : <span class="fw-600 ps-2">2 Kg</span></p>
+
+                  <div class="plus-minus">
+                    <div class="left">
+                      <img src="/src/assets/svg/Minus.svg" alt="" />
+                      <p class="fw-600 mx-4">1</p>
+                      <img src="/src/assets/svg/Plus.svg" alt="" />
+                    </div>
+
+                    <div class="right">
+                      <p>14 Tersisa</p>
+                    </div>
+                  </div>
+
+                  <div class="total">
+                    <p>Total Harga :</p>
+                    <h1>Rp86.000</h1>
+                  </div>
+
+                  <div class="button-group">
+                    <button class="button-custom light">Beli Langsung</button>
+                    <button class="button-custom">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 0C8.55228 0 9 0.447715 9 1V7H15C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9H9V15C9 15.5523 8.55228 16 8 16C7.44772 16 7 15.5523 7 15V9H1C0.447715 9 0 8.55228 0 8C0 7.44772 0.447715 7 1 7H7V1C7 0.447715 7.44772 0 8 0Z"
+                          fill="#729841"
+                        />
+                      </svg>
+
+                      Keranjang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review">
+            <h3>Ulasan</h3>
+            <div class="wrapper mt-3">
+              <div class="review-card">
+                <div class="top">
+                  <div class="left">
+                    <img
+                      src="/src/assets/images/avatar.png"
+                      alt=""
+                      class="avatar"
+                    />
+                    <div class="text">
+                      <h3 class="fw-500">Salsabila Putri</h3>
+                      <div class="detail">
+                        <p>Varian: 2.5 Kg</p>
+                        <p>13/10/2022, 10:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <img src="/src/assets/svg/star-sm.svg" alt="" />
+                    <p class="fw-600">5.0</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h3 class="fw-400">
+                    Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                    tepat waktu. Enak, manis. Puas banget
+                  </h3>
+
+                  <div class="images-review">
+                    <div class="video-player">
+                      <div class="play-button-wrapper">
+                        <img
+                          src="/src/assets/svg/play.svg"
+                          alt=""
+                          class="play-button"
+                        />
+                      </div>
+                      <video
+                        id="video-detail"
+                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                        controls
+                      ></video>
+                    </div>
+                    <img src="/src/assets/images/review-1.png" alt="" />
+                    <img src="/src/assets/images/review-1.png" alt="" />
+                    <img src="/src/assets/images/review-1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="top">
+                  <div class="left">
+                    <img
+                      src="/src/assets/images/avatar.png"
+                      alt=""
+                      class="avatar"
+                    />
+                    <div class="text">
+                      <h3 class="fw-500">Salsabila Putri</h3>
+                      <div class="detail">
+                        <p>Varian: 2.5 Kg</p>
+                        <p>13/10/2022, 10:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <img src="/src/assets/svg/star-sm.svg" alt="" />
+                    <p class="fw-600">5.0</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h3 class="fw-400">
+                    Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                    tepat waktu. Enak, manis. Puas banget
+                  </h3>
+
+                  <div class="images-review">
+                    <img src="/src/assets/images/review-1.png" alt="" />
+                    <img src="/src/assets/images/review-1.png" alt="" />
+                    <img src="/src/assets/images/review-1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="top">
+                  <div class="left">
+                    <img
+                      src="/src/assets/images/avatar.png"
+                      alt=""
+                      class="avatar"
+                    />
+                    <div class="text">
+                      <h3 class="fw-500">Salsabila Putri</h3>
+                      <div class="detail">
+                        <p>Varian: 2.5 Kg</p>
+                        <p>13/10/2022, 10:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <img src="/src/assets/svg/star-sm.svg" alt="" />
+                    <p class="fw-600">5.0</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h3 class="fw-400">
+                    Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                    tepat waktu. Enak, manis. Puas banget
+                  </h3>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="top">
+                  <div class="left">
+                    <img
+                      src="/src/assets/images/avatar.png"
+                      alt=""
+                      class="avatar"
+                    />
+                    <div class="text">
+                      <h3 class="fw-500">Salsabila Putri</h3>
+                      <div class="detail">
+                        <p>Varian: 2.5 Kg</p>
+                        <p>13/10/2022, 10:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <img src="/src/assets/svg/star-sm.svg" alt="" />
+                    <p class="fw-600">5.0</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h3 class="fw-400">
+                    Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                    tepat waktu. Enak, manis. Puas banget
+                  </h3>
+                </div>
+              </div>
+              <div class="review-card">
+                <div class="top">
+                  <div class="left">
+                    <img
+                      src="/src/assets/images/avatar.png"
+                      alt=""
+                      class="avatar"
+                    />
+                    <div class="text">
+                      <h3 class="fw-500">Salsabila Putri</h3>
+                      <div class="detail">
+                        <p>Varian: 2.5 Kg</p>
+                        <p>13/10/2022, 10:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <img src="/src/assets/svg/star-sm.svg" alt="" />
+                    <p class="fw-600">5.0</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h3 class="fw-400">
+                    Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                    tepat waktu. Enak, manis. Puas banget
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <img src="/src/assets/svg/paginate-left.svg" alt="" />
+
+              <div class="number active">1</div>
+              <div class="number">2</div>
+              <div class="number">3</div>
+              <div class="number">4</div>
+
+              <img src="/src/assets/svg/paginate-right.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/ant-design_youtube-outlined.svg"
+                alt=""
+              />
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">
+                Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+              </h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- pin js -->
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/pincode-input@0.1.0/dist/pincode-input.min.js"></script>
+
+    <script>
+      new PincodeInput(".input-pin", {
+        count: 4,
+        secure: true,
+        previewDuration: 200,
+        onInput: (value) => {
+          console.log(value);
+        },
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '"> </span>';
+          },
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <!-- video player -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var iconPlay = document.querySelector(".play-button-wrapper");
+        var videoElement = document.getElementById("video-detail");
+        videoElement.controls = false;
+
+        iconPlay.addEventListener("click", function (e) {
+          if (videoElement.paused) {
+            videoElement.play();
+            iconPlay.style.display = "none";
+            videoElement.controls = true;
+          } else {
+            videoElement.pause();
+            iconPlay.style.display = "flex";
+            videoElement.controls = false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

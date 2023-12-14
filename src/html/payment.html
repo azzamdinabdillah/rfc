@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <title>Proyek HTML dengan SCSS</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar-custom">
+        <div class="wrapper">
+          <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+          <div class="center">
+            <a href="index.html">Beranda</a>
+            <a href="transaction-history.html">Produk</a>
+            <a href="">Lelang</a>
+            <a href="help.html">Bantuan</a>
+          </div>
+
+          <div class="right">
+            <a href="cart.html">
+              <div>
+                <img src="/src/assets/svg/cart3.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="notif-count">
+              <img src="/src/assets/svg/bell.svg" alt="" />
+              <div>2</div>
+            </div>
+
+            <img src="/src/assets/svg/avatar.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-custom">
+        <div class="payment-pages">
+          <div class="breadcump">
+            <img
+              onclick="history.back()"
+              src="/src/assets/svg/Chevron.svg"
+              alt=""
+            />
+            <h1><b>Pembayaran /</b></h1>
+          </div>
+
+          <div class="time-countdown">
+            <p class="grey text-center">Bayar Sebelum</p>
+            <h1 class="lg text-center">00:20:10</h1>
+            <h3 class="text-center">Kamis, 9 Agustus 2023 - 10.00 WIB</h3>
+          </div>
+
+          <div class="total">
+            <div class="left">
+              <p class="grey">Total Pembayaran</p>
+              <p class="fw-600 black-16 mt-2">Rp274.000</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <p class="grey">Nomor Virtual Akun (BNI)</p>
+                <p class="fw-600 black-16 mt-2">7849390298473829</p>
+              </div>
+              <div class="copy">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.9688 6.25H3.90625C3.69905 6.25 3.50034 6.33231 3.35382 6.47882C3.20731 6.62534 3.125 6.82405 3.125 7.03125V21.0938C3.125 21.301 3.20731 21.4997 3.35382 21.6462C3.50034 21.7927 3.69905 21.875 3.90625 21.875H17.9688C18.176 21.875 18.3747 21.7927 18.5212 21.6462C18.6677 21.4997 18.75 21.301 18.75 21.0938V7.03125C18.75 6.82405 18.6677 6.62534 18.5212 6.47882C18.3747 6.33231 18.176 6.25 17.9688 6.25ZM17.1875 20.3125H4.6875V7.8125H17.1875V20.3125ZM21.875 3.90625V17.9688C21.875 18.176 21.7927 18.3747 21.6462 18.5212C21.4997 18.6677 21.301 18.75 21.0938 18.75C20.8865 18.75 20.6878 18.6677 20.5413 18.5212C20.3948 18.3747 20.3125 18.176 20.3125 17.9688V4.6875H7.03125C6.82405 4.6875 6.62534 4.60519 6.47882 4.45868C6.33231 4.31216 6.25 4.11345 6.25 3.90625C6.25 3.69905 6.33231 3.50034 6.47882 3.35382C6.62534 3.20731 6.82405 3.125 7.03125 3.125H21.0938C21.301 3.125 21.4997 3.20731 21.6462 3.35382C21.7927 3.50034 21.875 3.69905 21.875 3.90625Z"
+                    fill="#9F9F9F"
+                  />
+                </svg>
+
+                <p class="sm fw-600 grey-9f mb-0">Salin</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-status">
+            <a href="payment-detail.html">
+              <button class="button-custom">Lihat Status Pembayaran</button>
+            </a>
+          </div>
+
+          <div class="payment-guide">
+            <h3 class="mb-3">Panduan Pembayaran</h3>
+
+            <div class="wrapper">
+              <div class="item">
+                <div class="header">
+                  <p class="fw-600">OVO</p>
+                </div>
+
+                <div class="content">
+                  <ol>
+                    <li><p>Buka aplikasi OVO.</p></li>
+                    <li><p>Pilih menu Transfer.</p></li>
+                    <li><p>Pilih "Rekening Bank".</p></li>
+                    <li>
+                      <p>
+                        Masukkan kode bank BNI (009) atau pilih bank yang dituju
+                        yaitu BNI.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Masukan 16 Digit Nomor Virtual Account pada kolom
+                        rekening tujuan, (contoh: 8277082312206635).
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Masukkan nominal transfer sesuai tagihan atau kewajiban
+                        Anda.
+                      </p>
+                    </li>
+                    <li><p>Pilih "Transfer".</p></li>
+                    <li>
+                      <p>
+                        Konfirmasi rincian Anda akan tampil di layar, cek dan
+                        apabila sudah sesuai silahkan pilih "Konfirmasi" untuk
+                        lanjutkan transaksi sampai dengan selesai.
+                      </p>
+                    </li>
+                    <li><p>Transaksi Berhasil.</p></li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="header">
+                  <p class="fw-600">BNI Teller</p>
+                </div>
+
+                <div class="content">
+                  <ol>
+                    <li><p>Kunjungi Kantor Cabang/outlet BNI terdekat.</p></li>
+                    <li>
+                      <p>
+                        Informasikan kepada Teller, bahwa ingin melakukan
+                        pembayaran "Virtual Account Billing".
+                      </p>
+                    </li>
+                    <li>
+                      <p>Serahkan nomor Virtual Account Anda kepada Teller.</p>
+                    </li>
+                    <li>
+                      <p>Teller melakukan konfirmasi kepada Anda.</p>
+                    </li>
+                    <li>
+                      <p>Teller memproses Transaksi.</p>
+                    </li>
+                    <li>
+                      <p>
+                        Apabila transaksi Sukses anda akan menerima bukti
+                        pembayaran dari Teller tersebut.
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="header">
+                  <p class="fw-600">Mobile Banking</p>
+                </div>
+
+                <div class="content">
+                  <ol>
+                    <li>
+                      <p>
+                        Akses BNI Mobile Banking dari handphone kemudian
+                        masukkan user ID dan password.
+                      </p>
+                    </li>
+                    <li>
+                      <p>Pilih menu "Transfer".</p>
+                    </li>
+                    <li>
+                      <p>
+                        Pilih menu "Virtual Account Billing" kemudian pilih
+                        rekening debet.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Masukkan nomor Virtual Account Anda (contoh:
+                        8277082312206635) pada menu "input baru".
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Tagihan yang harus dibayarkan akan muncul pada layar
+                        konfirmasi.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Konfirmasi transaksi dan masukkan Password Transaksi.
+                      </p>
+                    </li>
+                    <li>
+                      <p>Pembayaran Anda Telah Berhasil.</p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/ant-design_youtube-outlined.svg"
+                alt=""
+              />
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">
+                Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+              </h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

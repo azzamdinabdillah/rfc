@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <title>Proyek HTML dengan SCSS</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar-custom">
+        <div class="wrapper">
+          <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+          <div class="center">
+            <a href="index.html">Beranda</a>
+            <a href="transaction-history.html">Produk</a>
+            <a href="">Lelang</a>
+            <a href="">Artikel</a>
+            <a href="help.html">Bantuan</a>
+          </div>
+
+          <div class="right">
+            <a href="cart.html">
+              <div>
+                <img src="/src/assets/svg/cart3.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="notif-count">
+              <img src="/src/assets/svg/bell.svg" alt="" />
+              <div>2</div>
+            </div>
+
+            <img src="/src/assets/svg/avatar.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-custom">
+        <div class="cart-pages">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-12 col-xl-7 product-list">
+                <div class="item">
+                  <div class="left">
+                    <input type="checkbox" />
+                    <div class="card-product">
+                      <div class="left">
+                        <img
+                          class="image-product"
+                          src="/src/assets/images/product-1.png"
+                          alt=""
+                        />
+                        <div class="text">
+                          <p>Melon Segar Big Size 2 kg - 2,5 kg</p>
+                          <p class="grey">Varian: 2,5 Kg</p>
+                          <h3 class="green">Rp93.000</h3>
+                        </div>
+                      </div>
+
+                      <div class="right">
+                        <div class="plus-minus">
+                          <img src="/src/assets/svg/cart-minus.svg" alt="" />
+                          <p class="mx-4">2</p>
+                          <img src="/src/assets/svg/cart-plus.svg" alt="" />
+                        </div>
+                        <img src="/src/assets/svg/trash.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="left">
+                    <input type="checkbox" />
+                    <div class="card-product">
+                      <div class="left">
+                        <img
+                          class="image-product"
+                          src="/src/assets/images/product-1.png"
+                          alt=""
+                        />
+                        <div class="text">
+                          <p>Melon Segar Big Size 2 kg - 2,5 kg</p>
+                          <p class="grey">Varian: 2,5 Kg</p>
+                          <h3 class="green">Rp93.000</h3>
+                        </div>
+                      </div>
+
+                      <div class="right">
+                        <div class="plus-minus">
+                          <img src="/src/assets/svg/cart-minus.svg" alt="" />
+                          <p class="mx-4">2</p>
+                          <img src="/src/assets/svg/cart-plus.svg" alt="" />
+                        </div>
+                        <img src="/src/assets/svg/trash.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="left">
+                    <input type="checkbox" />
+                    <div class="card-product">
+                      <div class="left">
+                        <img
+                          class="image-product"
+                          src="/src/assets/images/product-1.png"
+                          alt=""
+                        />
+                        <div class="text">
+                          <p>Melon Segar Big Size 2 kg - 2,5 kg</p>
+                          <p class="grey">Varian: 2,5 Kg</p>
+                          <h3 class="green">Rp93.000</h3>
+                        </div>
+                      </div>
+
+                      <div class="right">
+                        <div class="plus-minus">
+                          <img src="/src/assets/svg/cart-minus.svg" alt="" />
+                          <p class="mx-4">2</p>
+                          <img src="/src/assets/svg/cart-plus.svg" alt="" />
+                        </div>
+                        <img src="/src/assets/svg/trash.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-5 summary">
+                <div class="wrapper">
+                  <h3>Ringkasan</h3>
+
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <p class="grey-9f">Jumlah Barang</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p>5</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col-6">
+                      <p class="grey-9f">Total Harga Barang</p>
+                    </div>
+
+                    <div class="col-6">
+                      <p>Rp269.000</p>
+                    </div>
+                  </div>
+
+                  <a href="set-order.html">
+                    <button class="button-custom mt-4 w-100">
+                      Pesan Sekarang
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/ant-design_youtube-outlined.svg"
+                alt=""
+              />
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">
+                Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+              </h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

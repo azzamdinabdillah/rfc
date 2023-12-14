@@ -1,0 +1,15 @@
+{
+  "name": "rfc",
+  "version": "1.0.0",
+  "description": "project mba rimbi",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "node-sass src/scss/styles.scss dist/style.css --output-style compressed",
+    "watch-scss": "npm run compile-scss -- --watch"
+},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

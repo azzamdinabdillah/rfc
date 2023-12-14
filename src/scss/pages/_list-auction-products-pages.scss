@@ -1,0 +1,68 @@
+@import "../utils/fonts";
+
+.list-auction-products-pages {
+  margin: 50px 100px;
+
+  .top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 22px;
+
+    button {
+      font-size: 16px !important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-family: $lato;
+      padding: 12px 15px;
+      height: 56px;
+    }
+  }
+
+  .card-auction-wrapper {
+    margin-top: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      border-radius: 8px;
+      border: 1px solid #bfbfbf;
+      background-color: white;
+      box-shadow: 0px 1px 42px 0px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 119.756px;
+        height: 120.546px;
+        object-fit: cover;
+      }
+
+      .left {
+        gap: 25px;
+        display: flex;
+        align-items: center;
+      }
+
+      .text {
+        // .title{
+        //     margin-bottom: 12px;
+        // }
+
+        table {
+          tr {
+            td {
+              padding-top: 12px;
+              &:nth-child(2) {
+                padding: 0 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

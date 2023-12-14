@@ -1,0 +1,21 @@
+.button-custom {
+  padding: 12px 28px;
+  border-radius: 8px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #729841;
+  width: fit-content;
+  background-color: #a3d95d;
+  height: 56px;
+
+  &.light {
+    border: 1px solid #a3d95d;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <title>Proyek HTML dengan SCSS</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar-custom">
+        <div class="wrapper">
+          <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+          <div class="center">
+            <a href="index.html">Beranda</a>
+            <a href="transaction-history.html">Produk</a>
+            <a href="">Lelang</a>
+            <a href="">Artikel</a>
+            <a href="help.html">Bantuan</a>
+          </div>
+
+          <div class="right">
+            <a href="cart.html">
+              <div>
+                <img src="/src/assets/svg/cart3.svg" alt="" />
+              </div>
+            </a>
+
+            <div class="notif-count">
+              <img src="/src/assets/svg/bell.svg" alt="" />
+              <div>2</div>
+            </div>
+
+            <img src="/src/assets/svg/avatar.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-custom">
+        <div class="set-order-pages">
+          <div class="breadcump">
+            <img
+              onclick="history.back()"
+              src="/src/assets/svg/Chevron.svg"
+              alt=""
+            />
+            <h1><b>Detail Pembelian</b></h1>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-xl-7 order-setting">
+              <div class="detail-transaction no-bg">
+                <h3>Detail Transaksi</h3>
+                <div class="wrapper">
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="grey">Status</p>
+                    </div>
+                    <div class="col-6">
+                      <p>Menunggu pembayaran</p>
+                    </div>
+                  </div>
+
+                  <div class="row mt-1">
+                    <div class="col-6">
+                      <p class="grey">Tanggal Pembelian</p>
+                    </div>
+                    <div class="col-6">
+                      <p>09 Agustus 2023, 12.34 WIB</p>
+                    </div>
+                  </div>
+
+                  <div class="row mt-1">
+                    <div class="col-6">
+                      <p class="grey">Metode Pembelian</p>
+                    </div>
+                    <div class="col-6">
+                      <p>Reguler</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="address no-bg">
+                <h3>Alamat Pengiriman</h3>
+
+                <div class="wrapper">
+                  <div class="left">
+                    <div class="d-flex">
+                      <p class="black-20 fw-600">Kirana Putri</p>
+                      <p class="grey-80 ms-1">(Alamat Rumah)</p>
+                    </div>
+                    <p class="grey my-1">+6286278394045</p>
+                    <p class="grey">
+                      Jl. Sultan Hasanuddin No. 9 RT-005/ RW-003 Kel. Kariangau
+                      Kec. Balikpapan Barat Kota Balikpapan, Kalimantan Timur,
+                      76134
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="option-delivery no-bg">
+                <h3>Opsi Pengiriman</h3>
+
+                <div class="wrapper">
+                  <div class="left">
+                    <p class="black-20 fw-600">J&T Express</p>
+
+                    <p class="grey mt-1">Diterima pada 10 Agustus 2023</p>
+                  </div>
+
+                  <div class="d-flex">
+                    <p class="grey me-5">Rp5.000</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="list-product no-bg">
+                <h3>Daftar Produk</h3>
+
+                <div class="wrapper mt-2">
+                  <div class="card-product">
+                    <div class="left">
+                      <img
+                        class="image-product"
+                        src="/src/assets/images/product-1.png"
+                        alt=""
+                      />
+                      <div class="text">
+                        <p>Melon Segar Big Size 2 kg - 2,5 kg</p>
+                        <p class="grey">Varian: 2,5 Kg</p>
+                        <h3 class="green">Rp93.000</h3>
+                      </div>
+                    </div>
+
+                    <div class="right">
+                      <p class="sm me-4">x 2 Barang</p>
+                    </div>
+                  </div>
+                  <div class="card-product">
+                    <div class="left">
+                      <img
+                        class="image-product"
+                        src="/src/assets/images/product-2.png"
+                        alt=""
+                      />
+                      <div class="text">
+                        <p>Melon Segar Big Size 2 kg - 2,5 kg</p>
+                        <p class="grey">Varian: 2,5 Kg</p>
+                        <h3 class="green">Rp93.000</h3>
+                      </div>
+                    </div>
+
+                    <div class="right">
+                      <p class="sm me-4">x 2 Barang</p>
+                    </div>
+                  </div>
+                  <div class="card-product">
+                    <div class="left">
+                      <img
+                        class="image-product"
+                        src="/src/assets/images/product-3.png"
+                        alt=""
+                      />
+                      <div class="text">
+                        <p>Melon Segar Big Size 2 kg - 2,5 kg</p>
+                        <p class="grey">Varian: 2,5 Kg</p>
+                        <h3 class="green">Rp93.000</h3>
+                      </div>
+                    </div>
+
+                    <div class="right">
+                      <p class="sm me-4">x 2 Barang</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="note">
+                <h3>Beri Catatan</h3>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="border-bottom-only"
+                    placeholder="Masukkan catatan"
+                    value="Saya ingin pesanan saya dikirim dengan tambahan bubble wrap"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-xl-5 buy-method">
+              <div class="wrapper">
+                <div class="method">
+                  <h3>Metode Pembayaran</h3>
+
+                  <div class="item">
+                    <p class="fw-600 black-20">BNI</p>
+                  </div>
+                </div>
+
+                <div class="summary">
+                  <h3 class="mb-3">Ringkasan</h3>
+
+                  <div class="total">
+                    <div class="row">
+                      <div class="col-6">
+                        <p class="grey-9f">Jumlah Barang</p>
+                      </div>
+                      <div class="col-6">
+                        <p class="">5</p>
+                      </div>
+                    </div>
+                    <div class="row my-1">
+                      <div class="col-6">
+                        <p class="grey-9f">Total Harga Barang</p>
+                      </div>
+                      <div class="col-6">
+                        <p class="">Rp269.000</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <p class="grey-9f">Ongkos Kirim</p>
+                      </div>
+                      <div class="col-6">
+                        <p class="">Rp5.000</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-6">
+                        <h3 class="grey">Total Harga</h3>
+                      </div>
+                      <div class="col-6">
+                        <h3>Rp274.000</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn">
+                  <button class="button-custom">Bayar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/ant-design_youtube-outlined.svg"
+                alt=""
+              />
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">
+                Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+              </h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

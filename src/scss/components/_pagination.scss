@@ -1,0 +1,29 @@
+.pagination {
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: center;
+
+    .number {
+      border-radius: 4px;
+      border: 1px solid #dddfe8;
+      background-color: white;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      padding: 11px 16px;
+      color: #6c757d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.active {
+        border-radius: 4px;
+        background-color: #a3d95d;
+        border: none;
+        color: #598420;
+      }
+    }
+  }

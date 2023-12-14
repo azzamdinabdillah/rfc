@@ -1,0 +1,109 @@
+.history-transaction-pages {
+  .sidebar {
+    .wrapper {
+      position: sticky;
+      top: 20px;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #808080;
+      gap: 27px;
+      display: flex;
+      flex-direction: column;
+
+      .group {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+
+        div {
+          gap: 10px;
+          display: flex;
+          flex-direction: column;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .history-products {
+    padding-left: 50px;
+
+    .top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+
+      button {
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        font-family: $lato;
+        padding: 12px 15px;
+        height: 56px;
+      }
+    }
+
+    .wrapper {
+      margin-top: 50px;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 8px;
+        background: #fffcfc;
+        box-shadow: 0px 1px 42px 0px rgba(0, 0, 0, 0.08);
+
+        &.item-in-auction-history {
+            .left {
+              gap: 16px;
+              display: flex;
+              align-items: center;
+            }
+  
+            .product {
+              // align-items: flex-start;
+              justify-content: space-between;
+            }
+          }
+
+        .status {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .btn-pay {
+          display: flex;
+          justify-content: flex-end;
+
+          &.with-text {
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          button {
+            width: 153px;
+          }
+        }
+
+        .product {
+          gap: 16px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 70.343px;
+            height: 70.806px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

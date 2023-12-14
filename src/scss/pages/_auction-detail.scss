@@ -1,0 +1,108 @@
+@import "../utils/fonts";
+
+.auction-detail-pages {
+  .product-wrapper {
+    .product-detail {
+      .top {
+        align-items: flex-start;
+        gap: 50px;
+      }
+    }
+
+    .offer-section {
+      padding-left: 0;
+
+      .wrapper{
+        position: sticky;
+        top: 20px;
+      }
+
+      .top-offer {
+        .wrapper {
+          .rank {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 0;
+            font-family: $lato;
+          }
+
+          margin-top: 8px;
+          display: flex;
+          align-items: center;
+          gap: 27px;
+          padding: 20px;
+          border-radius: 12px;
+          border: 1px solid #bfbfbf;
+          background-color: white;
+        }
+      }
+
+      .make-offer {
+        padding: 46px 31px;
+        border-radius: 15px;
+        border: 1px solid #808080;
+        gap: 47px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+
+        .input-offer-wrapper {
+          gap: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .left,
+          .right {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #a3d95d;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+          }
+
+          input {
+            border: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #9f9f9f;
+            width: 132px;
+
+            &::placeholder {
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              color: #9f9f9f;
+            }
+          }
+        }
+      }
+    }
+
+    .will-come {
+      .wrapper {
+        position: sticky;
+        top: 20px;
+        padding: 46px 31px;
+        border-radius: 15px;
+        border: 1px solid #808080;
+
+        button{
+            margin-top: 47px;
+            width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .product-wrapper {
+      .offer-section, .will-come {
+        padding-left: 50px;
+      }
+    }
+  }
+}

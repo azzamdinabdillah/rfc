@@ -1,0 +1,26 @@
+.breadcump {
+  gap: 9px;
+  display: flex;
+  align-items: center;
+  img {
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  h1 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #808080;
+    margin-bottom: 0;
+
+    b {
+      color: black;
+    }
+  }
+}
