@@ -69,9 +69,17 @@
 
                       <div class="right">
                         <div class="plus-minus">
-                          <img src="/src/assets/svg/cart-minus.svg" alt="" />
+                          <img
+                            class="minus-icon"
+                            src="/src/assets/svg/cart-minus.svg"
+                            alt=""
+                          />
                           <p class="mx-4">2</p>
-                          <img src="/src/assets/svg/cart-plus.svg" alt="" />
+                          <img
+                            class="plus-icon"
+                            src="/src/assets/svg/cart-plus.svg"
+                            alt=""
+                          />
                         </div>
                         <img src="/src/assets/svg/trash.svg" alt="" />
                       </div>
@@ -97,9 +105,17 @@
 
                       <div class="right">
                         <div class="plus-minus">
-                          <img src="/src/assets/svg/cart-minus.svg" alt="" />
+                          <img
+                            class="minus-icon"
+                            src="/src/assets/svg/cart-minus.svg"
+                            alt=""
+                          />
                           <p class="mx-4">2</p>
-                          <img src="/src/assets/svg/cart-plus.svg" alt="" />
+                          <img
+                            class="plus-icon"
+                            src="/src/assets/svg/cart-plus.svg"
+                            alt=""
+                          />
                         </div>
                         <img src="/src/assets/svg/trash.svg" alt="" />
                       </div>
@@ -125,9 +141,17 @@
 
                       <div class="right">
                         <div class="plus-minus">
-                          <img src="/src/assets/svg/cart-minus.svg" alt="" />
+                          <img
+                            class="minus-icon"
+                            src="/src/assets/svg/cart-minus.svg"
+                            alt=""
+                          />
                           <p class="mx-4">2</p>
-                          <img src="/src/assets/svg/cart-plus.svg" alt="" />
+                          <img
+                            class="plus-icon"
+                            src="/src/assets/svg/cart-plus.svg"
+                            alt=""
+                          />
                         </div>
                         <img src="/src/assets/svg/trash.svg" alt="" />
                       </div>
@@ -239,5 +263,32 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      let minusIcon = document.querySelectorAll(".plus-minus .minus-icon");
+      let plusIcon = document.querySelectorAll(".plus-minus .plus-icon");
+      let plusMinusValue = document.querySelectorAll(".plus-minus p");
+      let cardProduct = document.querySelectorAll(".card-product");
+
+      console.log(minusIcon);
+
+      for (let i = 0; i < cardProduct.length; i++) {
+        let counter = 5;
+        plusMinusValue[i].innerHTML = counter;
+
+        function updateCounter() {
+          plusMinusValue[i].innerHTML = counter;
+        }
+
+        minusIcon[i].addEventListener("click", () => {
+          counter--;
+          updateCounter();
+        });
+        plusIcon[i].addEventListener("click", () => {
+          counter++;
+          updateCounter();
+        });
+      }
+    </script>
   </body>
 </html>

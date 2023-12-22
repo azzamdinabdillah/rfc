@@ -61,7 +61,7 @@
 
                 <div class="item w-100">
                   <label for="">Kata Sandi</label>
-                  <div class="with-icon">
+                  <div class="with-icon password-input-group">
                     <img
                       class="icon-suffix"
                       src="/src/assets/svg/eye.svg"
@@ -69,7 +69,7 @@
                     />
                     <input
                       class="border-grey w-100"
-                      type="text"
+                      type="password"
                       placeholder="Masukkan kata sandi"
                     />
                   </div>
@@ -166,7 +166,7 @@
 
                 <div class="item w-100">
                   <label for="">Kata Sandi</label>
-                  <div class="with-icon">
+                  <div class="with-icon password-input-group">
                     <img
                       class="icon-suffix"
                       src="/src/assets/svg/eye.svg"
@@ -286,7 +286,7 @@
               <div class="input-group w-100">
                 <div class="item w-100">
                   <label for="">Kata Sandi Baru</label>
-                  <div class="with-icon">
+                  <div class="with-icon password-input-group">
                     <img
                       class="icon-suffix"
                       src="/src/assets/svg/eye.svg"
@@ -302,7 +302,7 @@
 
                 <div class="item w-100">
                   <label for="">Konfirmasi Kata Sandi Baru</label>
-                  <div class="with-icon">
+                  <div class="with-icon password-input-group">
                     <img
                       class="icon-suffix"
                       src="/src/assets/svg/eye.svg"
@@ -911,6 +911,22 @@
     </script>
 
     <script>
+      // password toggle
+      let eyeIcon = document.querySelectorAll(
+        ".password-input-group .icon-suffix"
+      );
+      let passwordInput = document.querySelectorAll(".password-input-group input");
+
+      for (let i = 0; i < passwordInput.length; i++) {        
+        eyeIcon[i].addEventListener("click", () => {
+          if (passwordInput[i].type == "password") {
+            passwordInput[i].type = "text";
+          } else {
+            passwordInput[i].type = "password";
+          }
+        });
+      }
+
       // plus minus
       let minusIcon = document.querySelector(".plus-minus .left .minus-icon");
       let plusIcon = document.querySelector(".plus-minus .left .plus-icon");

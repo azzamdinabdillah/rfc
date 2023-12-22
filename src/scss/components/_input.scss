@@ -43,6 +43,12 @@
     padding: 12px 15px;
     width: 100%;
     height: 56px;
+    transition: 0.3s ease-in-out;
+    outline: none;
+
+    &:focus, &:active {
+      border: 2px solid #a3d95d !important;
+    }
 
     &.border-grey {
       border-radius: 6px;
