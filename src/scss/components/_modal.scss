@@ -1,4 +1,5 @@
 .modal {
+  z-index: 9999;
   .modal-dialog {
     max-width: 590px;
 
@@ -46,11 +47,11 @@
     .authentication {
       margin: 0 !important;
 
-      .pin-modal-wrapper{
+      .pin-modal-wrapper {
         gap: 28px;
         display: flex;
         flex-direction: column;
-        
+
         .input-pin {
           gap: 22px;
           display: flex;

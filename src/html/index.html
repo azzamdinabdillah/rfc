@@ -482,22 +482,22 @@
                     <h2>Rp86.000 - Rp92.000</h2>
 
                     <div class="variant">
-                      <div class="item active">
+                      <div class="item variant-item">
                         <p class="fw-600">2 Kg</p>
                       </div>
-                      <div class="item">
+                      <div class="item variant-item">
                         <p class="fw-600">2, 16 Kg</p>
                       </div>
-                      <div class="item">
+                      <div class="item variant-item">
                         <p class="fw-600">2 ,36 Kg</p>
                       </div>
-                      <div class="item">
+                      <div class="item variant-item">
                         <p class="fw-600">2 ,4 Kg</p>
                       </div>
-                      <div class="item">
+                      <div class="item variant-item">
                         <p class="fw-600">2 ,46 Kg</p>
                       </div>
-                      <div class="item">
+                      <div class="item variant-item">
                         <p class="fw-600">2 ,5 Kg</p>
                       </div>
                     </div>
@@ -563,13 +563,21 @@
 
                   <div class="plus-minus">
                     <div class="left">
-                      <img src="/src/assets/svg/Minus.svg" alt="" />
+                      <img
+                        class="minus-icon"
+                        src="/src/assets/svg/Minus.svg"
+                        alt=""
+                      />
                       <p class="fw-600 mx-4">1</p>
-                      <img src="/src/assets/svg/Plus.svg" alt="" />
+                      <img
+                        class="plus-icon"
+                        src="/src/assets/svg/Plus.svg"
+                        alt=""
+                      />
                     </div>
 
                     <div class="right">
-                      <p>14 Tersisa</p>
+                      <p><span>14</span> Tersisa</p>
                     </div>
                   </div>
 
@@ -901,8 +909,48 @@
       });
     </script>
 
-    <!-- video player -->
     <script>
+      // plus minus
+      let minusIcon = document.querySelector(".plus-minus .left .minus-icon");
+      let plusIcon = document.querySelector(".plus-minus .left .plus-icon");
+      let plusMinusValue = document.querySelector(".plus-minus .left p");
+      let restProduct = document.querySelector(".plus-minus .right p span");
+
+      let restProductValue = 14;
+      let counter = 1;
+      plusMinusValue.innerHTML = counter;
+      restProduct.innerHTML = restProductValue;
+      
+      function updateCounter() {
+        plusMinusValue.innerHTML = counter;
+        restProduct.innerHTML = restProductValue;
+      }
+
+      minusIcon.addEventListener("click", () => {
+        counter--;
+        restProductValue++;
+        updateCounter();
+      });
+      plusIcon.addEventListener("click", () => {
+        counter++;
+        restProductValue--;
+        updateCounter();
+      });
+
+      // select variant
+      let variantItem = document.querySelectorAll(".variant-item");
+
+      for (const item of variantItem) {
+        item.addEventListener("click", () => {
+          for (const variant of variantItem) {
+            variant.classList.remove("active");
+          }
+
+          item.classList.add("active");
+        });
+      }
+
+      // video player
       document.addEventListener("DOMContentLoaded", function () {
         var iconPlay = document.querySelector(".play-button-wrapper");
         var videoElement = document.getElementById("video-detail");
